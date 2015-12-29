@@ -469,6 +469,10 @@ class Pipe extends ZObject
     //  Returns true if the message is delimiter; false otherwise.
     private static boolean isDelimiter(Msg msg)
     {
+        if (msg == null) {
+            return false;
+        }
+
         return msg.isDelimiter();
     }
 
